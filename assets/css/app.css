@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap");
+* {
+	margin: 0;
+}
+
+body {
+	background-color: #dcdbdb;
+}
+
+.flex {
+	display: flex;
+}
+
+.container {
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+.container > p, .container > .flex > p{
+    text-shadow: 6px 6px #4544442b;
+}
+
+.social {
+	margin-top: 10px;
+    margin-right: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: end;
+}
+.social > div {
+	margin-left: 6px;
+	margin-right: 6px;
+}
+.socialLinks {
+	transition: all 0.3s ease-out;
+	background-color: #262938;
+	text-align: center;
+	padding: 0.5em;
+	width: 1em;
+	height: 1em;
+	border-radius: 100%;
+}
+.socialLinks > a > i {
+	color: white;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.socialLinks:hover {
+	transform: translate(0, -5px);
+	transition: all 0.3s ease-out;
+}
+
+.parent {
+	position: relative;
+	height: 80vh;
+	font-size: 22vh;
+	line-height: 19vh;
+	font-family: "Prompt", sans-serif;
+	text-transform: uppercase;
+}
+
+.child1 {
+	position: absolute;
+	width: 100vw;
+	height: 80vh;
+	top: 0;
+	left: 0;
+}
+
+.child2 {
+	z-index: 1;
+}
+
+.background {
+	position: absolute;
+	overflow: hidden;
+}
+.background > p {
+	white-space: nowrap;
+	color: #fff;
+	font-size: 15vw;
+	position: absolute;
+	bottom: 0;
+    margin-bottom: 65px;
+	margin-left: -34px;
+}
+.homeImage {
+	margin-left: 30px;
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 120px;
+	width: 300px;
+	background-image: url("/assets/img/livingroom.jpeg");
+	background-size: cover;
+	border-radius: 40px;
+	border: 7px solid #000;
+	transition: all 0.3s ease-in-out;
+    background-position-y: 60%;
+}
+
+.homeImage:hover {
+	transition: all 0.3s ease-in-out;
+    width: 400px;
+}
+
+.projectLink {
+	margin-left: auto;
+	font-size: 20px !important;
+	color: #000;
+	text-decoration: none;
+}
+
+.hoverableLink {
+	display: inline-block;
+	position: relative;
+	color: #000000;
+	line-height: 27px;
+}
+
+.hoverableLink::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	background-color: #000000;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.hoverableLink:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+.sec2 {
+	background-image: url("/assets/img/livingroom2.jpeg");
+	height: 20vw;
+	width: 100vw;
+    background-position-y: 60%;
+}
+
+.scroll-down {
+	position: absolute;
+	bottom: 10px;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	z-index: 100;
+	text-decoration: none;
+	width: 50px;
+	height: 50px;
+	border-bottom: 16px solid #fff;
+	border-right: 16px solid #fff;
+	z-index: 9;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0%) rotate(45deg);
+	-moz-transform: translate(-50%, 0%) rotate(45deg);
+	transform: translate(-50%, 0%) rotate(45deg);
+	-webkit-animation: fade_move_down 4s ease-in-out infinite;
+	-moz-animation: fade_move_down 4s ease-in-out infinite;
+	animation: fade_move_down 4s ease-in-out infinite;
+}
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+	0% {
+		-webkit-transform: translate(0, -10px) rotate(45deg);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translate(0, 10px) rotate(45deg);
+		opacity: 0;
+	}
+}
+@-moz-keyframes fade_move_down {
+	0% {
+		-moz-transform: translate(0, -10px) rotate(45deg);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-moz-transform: translate(0, 10px) rotate(45deg);
+		opacity: 0;
+	}
+}
+@keyframes fade_move_down {
+	0% {
+		transform: translate(0, -10px) rotate(45deg);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(0, 10px) rotate(45deg);
+		opacity: 0;
+	}
+}
